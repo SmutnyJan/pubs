@@ -3,15 +3,7 @@
 @{
 }
 <form method="post">
-    <div class="form-check">
-        <input class="form-check-input" type="text" asp-for="@Model.pubName" value="" placeholder="Název hospody">
-        <label class="form-check-label">
-            Název hospody
-        </label>
-        <input class="form-check-input" type="text" asp-for="@Model.pubLocation" value="" placeholder="Lokace hospody">
-        <label class="form-check-label">
-            Lokace hospody
-        </label>
+            <input type="text" asp-for="@Model.pubName" value="" placeholder="Název hospody">
+            <input type="text" asp-for="@Model.pubLocation" value="" placeholder="Lokace hospody">
         <button type="submit">Odeslat</button>
-    </div>
 </form>

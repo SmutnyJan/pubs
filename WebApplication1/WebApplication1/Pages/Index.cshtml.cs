@@ -23,7 +23,6 @@ namespace WebApplication1.Pages
         public void OnGet()
         {
             Pubs = _db.Pubs.ToList();
-            
         }
     }
     //_db.Pubs(new Pub {Name = "", Municipality = ""});

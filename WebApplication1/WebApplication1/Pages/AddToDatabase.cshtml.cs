@@ -10,6 +10,7 @@ namespace WebApplication1.Pages
 {
     public class AddToDatabaseModel : PageModel
     {
+        public int Difficulty { get; set; }
         [BindProperty]
         public string pubName { get; set; }
         [BindProperty]
@@ -26,10 +27,11 @@ namespace WebApplication1.Pages
             Pubs = _db.Pubs.ToList();
         }
 
-        public void OnPost()
+        public ActionResult OnPost()
         {
             _db.Pubs.Add(new Pub {Name = pubName, Municipality = pubLocation});
             _db.SaveChanges();
+            return RedirectToPage("./Index");
         }
     }
 }
