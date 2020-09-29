@@ -10,7 +10,6 @@ namespace WebApplication1.Pages
 {
     public class AddToDatabaseModel : PageModel
     {
-        public int Difficulty { get; set; }
         [BindProperty]
         public string pubName { get; set; }
         [BindProperty]
